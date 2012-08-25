@@ -18,3 +18,8 @@ test:
 # PRODUCTION notice
 # we never store production database information here
 # always SSH into the server and configure directly due to nature of open text
+production:
+  adapter: sqlite3
+  database: db/production.sqlite3
+  pool: 5
+  timeout: 5000
