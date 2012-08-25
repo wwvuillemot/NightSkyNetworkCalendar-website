@@ -1,4 +1,4 @@
-set :applicationdir,   "/home/sas_beta/beta.nsn-calendar.org"
+set :applicationdir,   "/home/wwvuillemot/nsn-calendar.org"
 set :user,        "wwvuillemot"
 set :domain,      "nsn-calendar.org"
 set :rails_env,   "production"
