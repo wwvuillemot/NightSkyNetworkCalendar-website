@@ -1,0 +1,154 @@
+#jqt.fullscreen #home .info {
+    display: none;
+}
+
+div#jqt #about {
+    padding-top: 40px;
+    text-shadow: rgba(0, 0, 0, 0.3) 0px -1px 0;
+    color: #fff;
+    font-size: 13px;
+    text-align: center;
+    background: #161618;
+//	background-image: url('/images/space_background.jpg');
+  	background-position: top center;
+  	background-repeat: no-repeat;
+	  background-color: #000;
+}
+
+div#jqt #about p{
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+#info p.copyright{
+    text-align: center;
+    color: #aaa;
+    font-size: 12px;
+}
+
+div#jqt #about p {
+    margin-bottom: 8px;
+}
+div#jqt #about a {
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+#text
+{
+	padding-top: 20px;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+#text a
+{
+	color: #eee;
+	font-size: 14px;
+}
+
+#text table
+{
+	width: 100%;
+}
+
+#text th, #text td
+{
+  overflow: hidden;
+  padding: 10px;
+  -webkit-transform: translate3d(0, 0, 0);
+	color: #fff;
+}
+
+#text th
+{
+	border: 1px solid #48494B;
+  background-image: none;
+	background-color: rgba(85, 86, 88, 0.2);
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, rgba(123, 124, 127, 0.2)), color-stop(3%, rgba(98, 99, 101, 0.2)), color-stop(100%, rgba(72, 73, 75, 0.2)));
+  background-image: -webkit-linear-gradient(top, rgba(123, 124, 127, 0.2), rgba(98, 99, 101, 0.2) 3%, rgba(72, 73, 75, 0.2));
+  background-image: linear-gradient(top, rgba(123, 124, 127, 0.2), rgba(98, 99, 101, 0.2) 3%, rgba(72, 73, 75, 0.2));	
+}
+
+#text p, #text img
+{
+	padding-left: -2px;
+	padding-right: -2px;
+	padding-bottom: 8px;
+	color: #ccc;
+}
+
+#about p, #text td
+{
+  margin-bottom: 10px;
+  color: #ccc;	
+}
+
+#text h1
+{
+	display: none;
+}
+
+#home_star_party
+{
+	width: 350px;
+}
+
+#jqt #text img
+{
+	width: 100%;
+}
+
+#text input[type=text], #text input[type=submit], #text input[type=email], #text input[type=password]
+{
+	width: 300px;
+	height: 40px;
+	font-size: 24px;
+	border: 1px solid black;
+	padding: 5px;
+	border-radius: 3px;
+	margin-bottom: 10px;
+}
+
+#jqt #text h1, #jqt #text h2, #jqt #text h3, #jqt #text h4{
+	margin-top: 0px;
+	margin-left: -5px;
+	margin-right: -5px;
+	margin-bottom: 5px;
+	padding: 10px;
+	-webkit-border-radius: 8px;
+  border-radius: 8px;
+  -webkit-box-shadow: rgba(255, 255, 255, 0.15) 0 1px 0;
+  box-shadow: rgba(255, 255, 255, 0.15) 0 1px 0;
+  background-color: #555658;
+  color: #D5D6D7;
+  text-shadow: #3C3D3E 0 -1px 0;
+  border: 1px solid #2F3031;
+  font: bold 18px "Helvetica Neue", Helvetica;
+}
+
+#text h3{
+	font-size: 16px;
+}
+
+#text h4{
+	font-size: 14px;
+}
+
+.center
+{
+	text-align: center;
+}
+
+devise input[type=text], devise input[type=submit], devise input[type=email], devise input[type=password], 
+#text input[type=text], #text input[type=submit], #text input[type=email], #text input[type=password]
+{
+	width: 300px;
+	height: 40px;
+	font-size: 24px;
+	border: 1px solid black;
+	padding: 5px;
+	border-radius: 3px;
+	margin-bottom: 10px;
+}

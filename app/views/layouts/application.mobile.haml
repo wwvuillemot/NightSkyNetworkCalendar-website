@@ -1,0 +1,9 @@
+%div
+  %div.toolbar
+    = link_to "Back", nil, :class => "back" unless current_page? root_path
+    %h1
+      = h @mobile ? @mobile : @title
+    = link_to "Full Site", "#{request.path}?mobile=0", :class => "button", :rel => "external"
+    = yield(:toolbar)
+      
+  = yield

@@ -1,0 +1,22 @@
+- if mobile_device?
+  = javascript_include_tag 'jquery.min'
+  = javascript_include_tag 'jquery_ujs'
+  = javascript_include_tag 'calendar'
+  = javascript_include_tag 'calendar-mobile'
+- else
+  = javascript_include_tag 'calendar'
+  = javascript_include_tag 'calendar-html'
+= stylesheet_link_tag 'calendar'
+- if mobile_device?
+  = stylesheet_link_tag 'calendar-mobile'
+#text
+
+  %h1 Calendar
+
+  #calendar
+
+  %br
+
+  #credits
+    Interested in adding this calendar to your own web-site?  Check out the open-source project, 
+    = link_to 'NSN Calendar on Github', 'https://github.com/wwvuillemot/NightSkyNetworkCalendar'

@@ -1,0 +1,20 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+# This model initially had no columns defined.  If you add columns to the
+# model remove the '{}' from the fixture names and add the columns immediately
+# below each fixture, per the syntax in the comments below
+#
+one:
+  slideshow: 'homepage'
+  slideshow_position: 1
+  image_url: 'http://image.com'
+  link_url: 'http://link.com'
+  caption: 'Caption'
+  is_active: true
+two: 
+  slideshow: 'homepage'
+  slideshow_position: 2
+  image_url: 'http://image.com'
+  link_url: 'http://link.com'
+  caption: 'Caption 2'
+  is_active: true

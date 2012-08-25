@@ -1,0 +1,49 @@
+%div#jqt
+  #about.selectable
+    %p
+      =link_to image_tag('sas_logo.png'), '#', { :class => 'grayButton goback'}
+
+    = render :file => '/page/home.html'
+
+    %p
+    %p
+      =link_to 'Close', '#', { :class => 'grayButton goback'}
+
+  #home.current
+    .toolbar
+      %h1 SAS
+      = link_to 'About', '#about', { :class => 'button slideup' }
+    .scroll
+
+      %ul.rounded
+        %li.arrow
+          = link_to 'Calendar', news_and_events_calendar_path
+        - outer_navigation.each do |outer|
+          - next if inner_navigation[outer[:outer_nav]].empty?
+          %li.arrow
+            = link_to outer[:text], "##{outer[:outer_nav]}"
+      %h2 External Links
+      %ul.rounded 
+        %li.forward
+          =link_to 'Facebook', 'http://facebook.com/seattleastro', { :target => '_blank' } 
+        %li.forward
+          =link_to 'Twitter', 'https://twitter.com/#!/NightSkyNetworkCalendarWebsite', { :target => '_blank' } 
+        %li.forward
+          =link_to 'Google', 'https://groups.google.com/forum/#!forum/night_sky_network_calendar_website', { :target => '_blank' } 
+        %li.forward
+          =link_to 'Store', 'http://www.cafepress.com/seattleastro', { :target => '_blank' }
+      #info
+        %p.copyright ©2011-2012 Seattle Astronomical Society
+        %p.copyright All Rights Reserved
+
+  - outer_navigation.each do |outer|
+    %div{ :id => outer[:outer_nav] }
+      .toolbar
+        %h1 
+          =outer[:text]
+        =link_to 'Back', '#', { :class => 'back' }
+      .scroll
+        %ul.rounded
+          - inner_navigation[outer[:outer_nav]].each do |inner|
+            %li.arrow
+              = link_to inner[:text], inner[:path]       

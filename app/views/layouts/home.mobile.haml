@@ -1,0 +1,18 @@
+!!!
+%html{:xmlns => "http://www.w3.org/1999/xhtml"}
+  = render :partial => 'layouts/head'
+  %body
+    %div.current
+      - if show_title?
+        %div.toolbar
+          - unless current_page? root_path
+            = link_to "Back", '#', :class => "back", :onclick => 'jQT.goBack();'
+          %h1
+            =h @mobile ? @mobile : @title
+          = link_to "Full Site", root_url(:mobile => 0), :class => "button", :rel => "external"
+          = yield(:toolbar)
+          
+      = yield
+
+    #footer
+      SAS

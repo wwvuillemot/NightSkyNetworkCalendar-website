@@ -1,0 +1,12 @@
+!!!
+%html{:xmlns => "http://www.w3.org/1999/xhtml"}
+  = render :partial => 'layouts/head'
+  %body
+    = render :partial => 'layouts/header'
+    = render :partial => 'layouts/navigation'
+    #middle-home
+      = render :partial => 'layouts/search'
+      #content-home
+        = render :partial => 'layouts/notifications'
+        = yield
+    = render :partial => 'layouts/footer'

@@ -1,0 +1,7 @@
+#main-navigation
+  %ul#main-navigation-items
+    - outer_navigation.each do |outer|
+      - if @outer_nav == outer[:outer_nav]
+        %li.current= link_to outer[:text], outer[:path]
+      - else
+        %li= link_to outer[:text], outer[:path]

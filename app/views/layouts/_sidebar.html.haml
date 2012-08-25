@@ -1,0 +1,16 @@
+#sidebar
+  %ul#sub-navigation-items
+    - unless @outer_nav.nil?
+      - inner_navigation[@outer_nav].each do |entry|
+        - path = entry[:paths].first
+        - unless entry[:params].nil?
+          - entry_params = []
+          - entry[:params].each do |param,value|
+            - entry_params.push(param.to_s + '=' + value.to_s)
+          - path += '?' + entry_params.join('&')
+        - if entry[:paths].include? request.path 
+          %li.current
+            = link_to entry[:text], path
+        - else
+          %li
+            = link_to entry[:text], path

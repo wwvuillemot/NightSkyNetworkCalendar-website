@@ -1,0 +1,39 @@
+%head
+  %meta{:content => 'text/xhtml;charset=utf-8', 'http-equiv' => 'content-type'}
+  - if mobile_device?
+    - title = 'NSN Calendar' + ( !@title.nil? ? ' | ' + @title : '' )
+  - else
+    - title = 'NSN Calendar'
+
+  %title= title
+  
+  - if mobile_device?
+    = stylesheet_link_tag '/jqtouch/themes/css/jqtouch.css'
+    - stylesheet_link_tag '/jqtouch/themes/css/apple.css'
+    = stylesheet_link_tag 'mobile'
+    = stylesheet_link_tag 'add_to_home'
+    <!-- generate new icons using http://www.quirco.com/iPhoneIcon -->
+    %link{ :rel => "apple-touch-icon", :href => "/images/iPhoneIcon_Small.png" }
+    %link{ :rel => "apple-touch-icon", :sizes => '72x72',   :href => "/images/iPhoneIcon_Medium.png" }
+    %link{ :rel => "apple-touch-icon", :sizes => '114x114', :href => "/images/iPhoneIcon_Large.png" }
+    <!-- iPhone SPLASHSCREEN-->
+    <link href="/images/apple-touch-startup-image-320x460.png" media="(device-width: 320px)" rel="apple-touch-startup-image">
+    <!-- iPhone (Retina) SPLASHSCREEN-->
+    <link href="/images/apple-touch-startup-image-640x920.png" media="(device-width: 640px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image">
+
+  - else
+    = stylesheet_link_tag    'application', :media => 'all'
+
+  = javascript_include_tag 'jquery.min'
+  - if mobile_device?
+    = javascript_include_tag '/jqtouch/src/jqtouch-jquery.min.js'
+    = javascript_include_tag '/jqtouch/src/jqtouch.min.js'
+    = javascript_include_tag '/jqtouch/extensions/jqt.themeswitcher.min.js'
+    = javascript_include_tag 'mobile'
+    = javascript_include_tag 'add_to_home'
+  - else
+    = javascript_include_tag 'jquery_ujs'
+    = javascript_include_tag 'jquery-ui.min'
+    = javascript_include_tag 'application'
+  - if Rails.env.production? && request.host.include?('nsn-calendar.org')
+    = javascript_include_tag 'google_analytics'

@@ -1,0 +1,12 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+# This model initially had no columns defined.  If you add columns to the
+# model remove the '{}' from the fixture names and add the columns immediately
+# below each fixture, per the syntax in the comments below
+#
+one:
+  title: 'Test Equipment'
+  description: 'A bunch of pieces of equipment'
+  notes: 'A bunch of pieces of equipment for reals'
+  description: '/images/a_image.jpg'
+  
