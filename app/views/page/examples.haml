@@ -32,8 +32,8 @@
         <!DOCTYPE html>
         <html>
           <head>
-             <title>NightSkyNetworkCalendar</title>
-            <link href="calendars.css" media="all" rel="stylesheet" type="text/css" />
+             <title>NightSkyNetwork Calendar</title>
+             <link href="calendars.css" media="all" rel="stylesheet" type="text/css" />
              <script src="jquery.js" type="text/javascript"></script>
             <script src="calendars.js" type="text/javascript"></script>
           </head>
@@ -46,13 +46,13 @@
               will work out-of-the-box.
                -->
             <script type="text/javascript>
-                    var calendar;
+              // for now you must have a variable named 'calendar' globally scoped
+              var calendar;
               $(document).ready( function() {
-
+                var calendar = new Calendar();
                 configuration = { 
                   nightsky_club_id: 1438
                 };
-                var calendar = new Calendar();
                 calendar.configure(configuration);
                 calendar.generate();
               });
