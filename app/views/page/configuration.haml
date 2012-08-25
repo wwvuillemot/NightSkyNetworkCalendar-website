@@ -1,2 +1,111 @@
 #text
   %h1 Configuring Calendar
+
+  %p Here are the following things you can configure.
+
+  %pre.code
+    = preserve do
+      :escaped
+        $(document).ready( function() {
+          configuration = { 
+            language: 'en',
+            nightsky_club_id: 1438,
+            display_as_calendar: true,
+            display_holidays: true,
+            display_sunsets: true,
+            display_sunrises: true,
+            calendar_div_id: 'calendar',
+            show_event_onclick: function(event_id){
+              return "$('#calendar_navigation').hide('drop'); " +
+                "$('.calender_event').hide(); " + 
+                "$('#" + event_id + "').show('drop');";
+            },
+            show_title_onclick: function(){
+              return "$('.calender_event').hide('drop'); " +
+                "$('#calendar_navigation').show('drop');";
+            },
+          };
+          var calendar = new Calendar();
+          calendar.configure(configuration);
+          calendar.generate();
+        });
+
+  %h2 Language
+
+  %p At present only English (`en`) is supported.  But it is possible for you to add your own localization by adding to Javascript the following where `LOCALE_ID` is the locale you are localizing to.
+
+  %pre.code
+    = preserve do
+      :escaped
+        CALENDAR_LABELS[LOCALE_ID] = 
+        {
+          months: { 
+            1: 'January', 
+            2: 'February', 
+            3: 'March', 
+            4: 'April', 
+            5: 'May', 
+            6: 'June', 
+            7: 'July',
+            8: 'August',
+            9: 'September',
+            10: 'October',
+            11: 'November',
+            12: 'December'
+          },
+          months_short: { 
+            1: 'Jan', 
+            2: 'Feb', 
+            3: 'Mar', 
+            4: 'Apr', 
+            5: 'May', 
+            6: 'Jun', 
+            7: 'Jul',
+            8: 'Aug',
+            9: 'Sep',
+            10: 'Oct',
+            11: 'Nov',
+            12: 'Dec'
+          },
+          days_of_week: {
+            0: 'Sun',
+            1: 'Mon',
+            2: 'Tue',
+            3: 'Wed',
+            4: 'Thu',
+            5: 'Fri',
+            6: 'Sat',
+          }
+        };
+  
+  %h2 `display_as_calendar`
+
+  %p This is `true` by default.
+
+  %p Set this to `false` to have the days of the month stretch across the page without using weekday headers.
+
+  %h2 `display_holidays`
+
+  %p This is `false` by default.
+
+  %p Set this to `true` to include any holidays included in the NSN calendar.
+
+  %h2 `display_sunsets`
+
+  %p This is `false` by default.
+
+  %p Set this to `true` to include any sunset times included in the NSN calendar.
+
+  %h2 `display_sunrises`
+
+  %p This is `false` by default.
+
+  %p Set this to `true` to include any sunrise times included in the NSN calendar.
+
+  %h2 `show_event_onclick`
+
+  %p You can override the default behavior whenever a user clicks on a calendar date (e.g. '18').
+
+  %h2 `show_title_onclick`
+
+  %p You can override the default behavior whenever a user clicks on a calendar title (e.g. September 2012).

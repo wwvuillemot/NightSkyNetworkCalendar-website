@@ -161,18 +161,18 @@ li {
 }
 
 #middle-main {
-	width: 960px;
+	width: 980px;
 	margin: 0 auto;
 	background: #fff;
 	border: 2px solid #739aaf;
 	overflow: hidden;
 	background-image: url('/images/background.jpg');
 	background-position: top center;
-	background-repeat: no-repeat;
+	background-repeat: y-repeat;
 }
 
 #middle-home {
-	width: 960px;
+	width: 980px;
 	margin: 0 auto;
 	border: 2px solid #739aaf;
 	background-image: url('/images/background.jpg');
@@ -228,7 +228,7 @@ pre.code
 
 #content-home {
 	clear: both;
-	width: 920px;
+	width: 940px;
 	overflow: hidden;
 	background-color: #FFF;
 	padding: 20px;
