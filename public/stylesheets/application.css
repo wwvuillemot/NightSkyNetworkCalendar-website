@@ -190,14 +190,9 @@ li {
 	border-radius: none !important;
 }
 
-#join-icons {
-	float: right;
-	padding: 2px 10px;
-}
-
 pre.code
 {
-	background: #ccc;
+	background: rgba(115,154,175,0.4);
 	font-family: monospace;
 	font-size: 13px;
 	padding: 10px;
@@ -221,7 +216,7 @@ pre.code
 {
 	border: 1px solid #ddd;
 	padding: 5px;
-	background: #eee;
+  background: rgba(115,154,175,0.6);
 	opacity: 1.0;
 }
 
@@ -369,24 +364,35 @@ pre.code
 	display: inline;
 }
 
+#text
+{
+	position: relative;
+}
 #text p strong {
 	color: #163147;
 	font-size: 18px;
 }
 
+#content-both
+{
+	background: rgba(255,255,255,0.85);	
+	position: relative;
+}
+
 #content-left
 {
-	float: left;
-	background: rgba(255,255,255,0.85);
+	top: 0px;
+	left: 0px;
+	width: 200px;
 }
 
 #content-right
 {
-	margin-top: 5px;
+	top: 0px;
+	margin-top: 0px;
+	margin-left: 220px;
 	padding: 10px;
-	float: right;
 	width: 740px;
-	background: rgba(255,255,255,0.85);
 }
 
 h1, h2, h3, h4, h5, h6{

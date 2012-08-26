@@ -3,11 +3,12 @@
 	display: none;
 }
 
-#text *
-{
-	font-family: 'Open Sans Condensed', sans-serif;
+#calendar
+{	
+	background-color: rgba(255,255,255,0.75) !important;
+	height: 500px;	
+	margin-top: 0px;
 }
-
 
 #calendar_previous{
 	float:left;
@@ -17,8 +18,9 @@
 	float:right;
 }
 
-#calendar_previous a, #calendar_next a{
+#calendar_previous a, #calendar_title a, #calendar_next a{
 	text-decoration: none;
+	font-size: 36px;
 }
 
 #calendar_next, #calendar_previous, #calendar_title
@@ -26,7 +28,6 @@
   width: 22px !important;
 	font-size: 36px !important;
 	line-height: 52px !important;
-	font-family: Futura, "Futura Condensed", Helvetica, Arial, sans-serif !important;
 	font-weight: bold !important;
 }
 
@@ -50,9 +51,6 @@
 
 #calendar_navigation
 {
-	clear: both;
-	float: left;
-	width: 100%;
 	text-align: center;
 	margin-top: 3px;
 	border-radius: 0px !important;
@@ -82,7 +80,7 @@
 	line-height: 20px;
 	font-size: 20px;
 	text-align: center;
-	border: 1px solid #fff;
+	border: 1px solid rgba(255,255,255,0);
 }
 
 #calendar_navigation ul.as_calendar
@@ -132,7 +130,6 @@
 
 #calendar_body
 {
-	clear: both;
 }
 
 #calender_events
@@ -178,7 +175,7 @@
 .event_details{
 	float: left;
 	clear: both;
-	width: 100%;
+//	width: 100%;
 	padding-bottom: 10px;
 }
 
@@ -213,4 +210,9 @@
 	 font-size: 12px;
 	 padding-left: 10px;
 	 padding-bottom: 5px;
+}
+
+#calendar *
+{
+//	border: 1px solid black;
 }

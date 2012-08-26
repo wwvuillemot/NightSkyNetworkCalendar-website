@@ -8,10 +8,11 @@
       = render :partial => 'layouts/search'
       / Begin Content
       #content-main
-        #content-left
-          = render :partial => 'layouts/sidebar'
-        #content-right
-          = render :partial => 'layouts/notifications'
-          = yield
+        #content-both
+          #content-left
+            = render :partial => 'layouts/sidebar'
+          #content-right
+            = render :partial => 'layouts/notifications'
+            = yield
       / End Content
     = render :partial => 'layouts/footer'
