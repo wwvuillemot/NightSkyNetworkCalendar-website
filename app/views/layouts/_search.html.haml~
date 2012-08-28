@@ -1,4 +1,4 @@
 #top-bar
   %a{:href => "https://github.com/wwvuillemot/NightSkyNetworkCalendar"}= image_tag("github_blue_white_g_32.png",       |
                     :size => "32x32", |
-      :alt => "Find us on Github", :style => "border: 0px;") 
+      :alt => "Find us on Github") 

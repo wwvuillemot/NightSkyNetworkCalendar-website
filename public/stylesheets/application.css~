@@ -193,7 +193,7 @@ li {
 }
 
 // IE fix
-#top-bar a
+#top-bar *
 {
   border: 0px !important;
 }

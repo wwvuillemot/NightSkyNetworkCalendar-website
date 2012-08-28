@@ -7,5 +7,4 @@
     %li
       | #{link_to "Mobile Site", root_url(:mobile => 1)}
   #footer-copyright
-    %p
-      ©2011-2012 Ward W. Vuillemot :: All Rights Reserved
+    ©2011-2012 Ward W. Vuillemot :: All Rights Reserved
