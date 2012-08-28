@@ -6,7 +6,8 @@
     The following directions will get you started quickly with minimal fuss.
 
   %p 
-    Please read [how to further configure](NightSkyNetworkCalendar/wiki/Configuration).
+    Please read 
+    = link_to 'how to further configure', configuration_path
 
   %h2 Download Files
 
@@ -49,7 +50,7 @@
               // for now you must have a variable named 'calendar' globally scoped
               var calendar;
               $(document).ready( function() {
-                var calendar = new Calendar();
+                calendar = new Calendar();
                 configuration = { 
                   nightsky_club_id: 1438
                 };
