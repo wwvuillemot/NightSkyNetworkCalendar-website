@@ -20,7 +20,7 @@ module ApplicationHelper
       { :text => "Home",
         :outer_nav => "o_home",
         :path => home_path },
-      { :text => "Examples",
+      { :text => "Docs",
         :outer_nav => "o_examples",
         :path => examples_path },
       { :text => "About",
@@ -51,7 +51,7 @@ module ApplicationHelper
     inner_navigation['o_home'] << { :paths => [examples_path], :text => 'About' }
 
     inner_navigation['o_examples'] << { :paths => [examples_path], :text => 'Getting Started' }
-    inner_navigation['o_examples'] << { :paths => [configuration_path], :text => 'Configuration Options' }
+    inner_navigation['o_examples'] << { :paths => [configuration_path], :text => 'Configuration' }
     inner_navigation['o_examples'] << { :paths => [examples_simple_path], :text => 'Simple Example' }
     
     inner_navigation['o_about'] << { :paths => [about_path], :text => 'About' }

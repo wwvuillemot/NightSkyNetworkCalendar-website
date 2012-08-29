@@ -22,6 +22,20 @@
       =link_to 'Jquery.', 'http://jquery.com/download/'
       If you not already using this then you will need to include this in your page `head`
 
+  %h2 Get your Club's NSN ID
+
+  %p
+    To get your Club ID, 
+    =link_to 'log into NSN' 'https://nightsky.jpl.nasa.gov/login.cfm'
+    and look at the URL at the top of your browser.  It will look like 
+    %code
+      https://nightsky.jpl.nasa.gov/club/club-view.cfm?Club_ID=
+    followed by a number.  That number is your Club’s ID on NSN. 
+
+  %p
+    You will add include this NSN ID in your calendar configuration as
+    illustrated below.
+  
   %h2 Add Calendar to a Page
 
   %p
@@ -54,8 +68,19 @@
               var calendar;
               $(document).ready( function() {
                 calendar = new Calendar();
+                <!--
+                To get your Club ID, log into NSN 
+                (https://nightsky.jpl.nasa.gov/login.cfm) and look at 
+                the URL at the top of your browser.  
+                
+                It will be:
+                  https://nightsky.jpl.nasa.gov/club/club-view.cfm?Club_ID=
+                followed by a number.  
+                
+                That number is your Club's ID on NSN.
+                -->
                 configuration = { 
-                  nightsky_club_id: 1438
+                  nightsky_club_id: ENTER_YOUR_NSN_CLUB_ID 
                 };
                 calendar.configure(configuration);
                 calendar.generate();

@@ -20,7 +20,7 @@ module ApplicationHelper
       { :text => "Home",
         :outer_nav => "o_home",
         :path => home_path },
-      { :text => "Examples",
+      { :text => "Instructions",
         :outer_nav => "o_examples",
         :path => examples_path },
       { :text => "About",
