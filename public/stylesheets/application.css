@@ -158,24 +158,25 @@ li {
 	color: #fff;
 }
 
+.constellation-background
+{
+	background-image: url('/images/background_0.jpg');
+	background-position: top center;
+	background-repeat: y-repeat;	
+}
+
 #middle-main {
 	width: 980px;
 	margin: 0 auto;
 	background: #fff;
 	border: 2px solid #739aaf;
 	overflow: hidden;
-	background-image: url('/images/background.jpg');
-	background-position: top center;
-	background-repeat: y-repeat;
 }
 
 #middle-home {
 	width: 980px;
 	margin: 0 auto;
 	border: 2px solid #739aaf;
-	background-image: url('/images/background.jpg');
-	background-position: top center;
-	background-repeat: no-repeat;
 }
 
 #top-bar {
