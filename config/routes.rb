@@ -6,6 +6,7 @@ NightSkyNetworkCalendarWebsite::Application.routes.draw do
   match '/examples/simple',      :to => 'page#example_simple'
   match '/configuration',      :to => 'page#configuration'
   match '/about',         :to => 'page#about'
+  match '/contact',         :to => 'page#contact'
 
 
   root :to => "page#home"

@@ -1,8 +1,15 @@
 # coding: utf-8
 class PageController < ApplicationController
+  
+	before_filter :global_notice, :except => [:error]
+
+	def global_notice
+    flash[:notice] = "This calendar-widget is currently <b>beta</b> quality.  It <em>should</em> work out of the box; but, if it does not then <a href='/contact'>please contact the author</a>."
+	end
 
   def error
-    flash[:notice] = 'An error occurred; we are unable to find the page you are looking for.'
+	  flash[:notice] = nil
+    flash[:alert] = 'An error occurred; we are unable to find the page you are looking for.'
 
     respond_to do |format|
       format.html { render :layout => 'home' }
@@ -20,6 +27,16 @@ class PageController < ApplicationController
     end    
   end
 
+  def contact
+    @outer_nav = 'o_contact'
+    @title = 'Night Sky Network › Contact'
+    @mobile = 'Contact'
+    respond_to do |format|
+      format.html { render :layout => 'home' }
+      format.mobile { render :layout => 'application' }
+    end    
+  end
+  
   def about
     @outer_nav = 'o_about'
     @title = 'Night Sky Network › About'

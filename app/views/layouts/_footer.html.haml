@@ -3,9 +3,12 @@
     %li
       #{link_to "About", about_path}
     %li
-      | #{link_to "Examples", examples_path}
+      | #{link_to "Contact", contact_path}
     %li
-      | #{link_to "Mobile Site", root_url(:mobile => 1)}
+      | #{link_to "Instructions", examples_path}
+    -if [:development].include? Rails.env
+      %li
+        | #{link_to "Mobile Site", root_url(:mobile => 1)}
   #footer-copyright
     %p
       ©2011-2012 Ward W. Vuillemot :: All Rights Reserved

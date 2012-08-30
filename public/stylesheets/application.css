@@ -297,14 +297,32 @@ pre.code
 
 .notifications
 {
-	margin-top: -15px;
+}
+
+#content-main .notifications
+{
+	margin-top: -25px;
+	margin-right: 45px;
+	margin-left: 5px;
+}
+
+#content-home .notifications
+{
+	margin-top: -30px;
+	margin-right: 18px;
+}
+
+.notifications a:hover
+{
+	color: #fff;
 }
 
 .notifications p
 {
 	margin: 10px;
 	padding: 10px;
-	background-color: #739AAF;
+	background-color: #ccc;
+	//#739AAF;
 	color: #fff;
 	border-radius: 3px;
 }
@@ -312,7 +330,8 @@ pre.code
 .notice
 {
 	padding: 3px;
-	background-color: #739AAF;
+	background-color: #ccc;
+	//#739AAF;
 	color: #fff;
 	border-radius: 3px;
 	

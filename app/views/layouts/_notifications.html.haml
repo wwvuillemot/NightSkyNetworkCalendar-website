@@ -1,7 +1,7 @@
 %div.notifications
   - unless notice.nil?
     %p{ :class => "notice"}
-      = notice
+      = raw notice
   - unless alert.nil?
     %p{ :class => "alert"}
       = alert
