@@ -47,7 +47,7 @@ class PageController < ApplicationController
     end    
   end
   
-  def examples
+  def instructions
     @outer_nav = 'o_examples'
     @title = 'Night Sky Network › Examples'
     @mobile = 'Examples'

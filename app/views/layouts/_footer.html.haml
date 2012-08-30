@@ -5,7 +5,7 @@
     %li
       | #{link_to "Contact", contact_path}
     %li
-      | #{link_to "Instructions", examples_path}
+      | #{link_to "Instructions", instructions_path}
     -if [:development].include? Rails.env
       %li
         | #{link_to "Mobile Site", root_url(:mobile => 1)}

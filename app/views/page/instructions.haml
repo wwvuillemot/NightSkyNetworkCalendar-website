@@ -1,0 +1,91 @@
+#text
+
+  %h1 Getting Started
+
+  %p
+    The following directions will get you started quickly with minimal fuss.
+
+  %p 
+    Please read 
+    = link_to 'how to further configure', configuration_path
+
+  %h2 Download Files
+
+  %p
+    First, download a copy of the latest version of the Javascript and CSS here:
+
+  %ul
+    %li= link_to 'Calendar Javascript', 'https://github.com/wwvuillemot/NightSkyNetworkCalendar/blob/master/public/assets/application.js'
+    %li= link_to 'Calendar CSS', 'https://github.com/wwvuillemot/NightSkyNetworkCalendar/blob/master/public/assets/application.css'
+    %li 
+      Calendar is dependent on 
+      =link_to 'Jquery.', 'http://jquery.com/download/'
+      If you not already using this then you will need to include this in your page `head`
+
+  %h2 Get your Club's NSN ID
+
+  %p
+    To get your Club ID, 
+    =link_to 'log into NSN' 'https://nightsky.jpl.nasa.gov/login.cfm'
+    and look at the URL at the top of your browser.  It will look like 
+    %code
+      https://nightsky.jpl.nasa.gov/club/club-view.cfm?Club_ID=
+    followed by a number.  That number is your Club's ID on NSN. 
+
+  %p
+    You will add include this NSN ID in your calendar configuration as
+    illustrated below.
+  
+  %h2 Add Calendar to a Page
+
+  %p
+    Second, add the Javascript and CCS along with your configuration to the HTML page.
+
+  %pre.code
+    = preserve do
+      :escaped
+        <!DOCTYPE html>
+        <html>
+          <head>
+             <title>NightSkyNetwork Calendar</title>
+             <link href="calendars.css" media="all" 
+               rel="stylesheet" type="text/css" />
+             <script src="jquery.js" type="text/javascript"></script>
+            <script src="calendars.js" type="text/javascript"></script>
+          </head>
+          <body>
+             <!--
+              Calendar looks for a div tag with id='calendar'
+              You can override this; please refer to Configuration 
+              for more information.
+    
+              The only thing required is to pass your club's Night Sky ID; 
+              otherwise, it will work out-of-the-box.
+               -->
+            <script type="text/javascript>
+              // for now you must have a variable named 'calendar' 
+              // globally scoped
+              var calendar;
+              $(document).ready( function() {
+                calendar = new Calendar();
+                <!--
+                To get your Club ID, log into NSN 
+                (https://nightsky.jpl.nasa.gov/login.cfm) and look at 
+                the URL at the top of your browser.  
+                
+                It will be:
+                  https://nightsky.jpl.nasa.gov/club/club-view.cfm?Club_ID=
+                followed by a number.  
+                
+                That number is your Club's ID on NSN.
+                -->
+                configuration = { 
+                  nightsky_club_id: ENTER_YOUR_NSN_CLUB_ID 
+                };
+                calendar.configure(configuration);
+                calendar.generate();
+              });
+            </script>
+            <div id='calendar'></div>
+          </body>
+        </html>

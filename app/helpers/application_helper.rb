@@ -22,7 +22,7 @@ module ApplicationHelper
         :path => home_path },
       { :text => "Instructions",
         :outer_nav => "o_examples",
-        :path => examples_path },
+        :path => instructions_path },
       { :text => "Contact",
         :outer_nav => "o_contact",
         :path => contact_path },
@@ -50,10 +50,10 @@ module ApplicationHelper
       inner_navigation[item[:outer_nav]] = []
     end
 
-    inner_navigation['o_home'] << { :paths => [examples_path], :text => 'Examples' }
-    inner_navigation['o_home'] << { :paths => [examples_path], :text => 'About' }
+    inner_navigation['o_home'] << { :paths => [instructions_path], :text => 'Examples' }
+    inner_navigation['o_home'] << { :paths => [instructions_path], :text => 'About' }
 
-    inner_navigation['o_examples'] << { :paths => [examples_path], :text => 'Getting Started' }
+    inner_navigation['o_examples'] << { :paths => [instructions_path], :text => 'Getting Started' }
     inner_navigation['o_examples'] << { :paths => [configuration_path], :text => 'Configuration' }
     inner_navigation['o_examples'] << { :paths => [examples_simple_path], :text => 'Simple Example' }
     
